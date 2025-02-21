@@ -3,166 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovation Cell - Central University of Jammu</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>CU Innovation Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e6f3ff;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(45deg, #6b7280, #a337c8);
+            padding-top: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6b7280;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 0.4s linear infinite;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(-5px);
+                opacity: 1;
+            }
+        }
+
+        .about-time, .team-grid, .contact-container {
+            padding: 2rem;
+            border: 1px solid #ddd;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 5rem;
+            }
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-container {
+            margin-top: 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            margin-bottom: 4rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            color: white;
+        }
+
+        .social-icons {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .social-icons button {
+            padding: 0.5rem 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Innovation Cell Logo">
-        </div>
-        <h1>Central University of Jammu</h1>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="dropdown">
-                    <a href="#events" class="drop-btn">Events</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#hackathons">Hackathons</a></li>
-                        <li><a href="#webinars">Webinars</a></li>
-                        <li><a href="#innovations">Innovations</a></li>
-                    </ul>
-                </li>
-                <li><a href="#why-join">Why Join</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <div class="hero-section">
-                <h2>WELCOME TO</h2>
-                <h1><span class="highlight">INNOVATION CELL</span></h1>
-                <p>Innovation Cell is a student-driven official technical society of Central University of Jammu, aimed at fostering a vibrant innovation ecosystem within the university.</p>
-                <a href="#why-join" class="btn-primary">Why Join Us?</a>
-                <a href="https://en.wikipedia.org/wiki/Innovation" target="_blank" class="btn-secondary">Learn More →</a>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero" id="home">
+            <h1>CU Innovation Club</h1>
+            <p>Create, Build, Transform Ideas</p>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <div class="table">
+                <table width="100%" align="center">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Cu Chiara</th>
+                            <th>Email</th>
+                            <th>LinkedIn</th>
+                            <th>Social Media</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <div>
+                            <h3>Degrees</h3>
+                            <p>BTech | IIT Bombay</p>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Cu Chiara, Pune</p>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="#contact" class="social-icons">Facebook</a>
+                            <a href="#contact" class="social-icons">Instagram</a>
+                            <a href="#contact" class="social-icons">LinkedIn</a>
+                        </div>
+                    </tbody>
+                </table>
             </div>
         </section>
-        <section id="about-us">
-            <div class="content">
-                <h2>About Us</h2>
-                <p>We are proud students of the Central University of Jammu and members of the esteemed Innovation Cell. Our mission is to foster innovation and creativity within the university, bridging the gap between academia and the real world. As active participants in this club, we collaborate on cutting-edge research, develop groundbreaking solutions to societal challenges, and contribute to the university's vibrant technical ecosystem. Our journey is driven by a shared passion for technology, entrepreneurship, and making a meaningful impact.</p>
-                <a href="#contacts" class="btn-learn">Contact Us</a>
+
+        <section class="team" id="team">
+            <h2>Our Team</h2>
+            <div class="table">
+                <table width="100%" align="center">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Curiosities</th>
+                            <th>Interests</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <div>
+                            <h3>Ashay</h3>
+                            <a href="#contact" class="social-icons">GitHub</a>
+                            <span>Mechanical Systems</span>
+                            <span>Coding, Robotics</span>
+                        </div>
+                        <div>
+                            <h3>Ethan</h3>
+                            <a href="#contact" class="social-icons">LinkedIn</a>
+                            <span>Neural Networks</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </tbody>
+                </table>
             </div>
         </section>
-        <section id="events">
-            <h2>Our Events</h2>
-            <div class="content">
-                <div class="event-grid">
-                    <div class="event" id="hackathons">
-                        <img src="hackathon.png" alt="Hackathon Event">
-                        <h3>Hackathons</h3>
-                        <p>Join our high-energy hackathons where innovation meets competition. Solve real-world challenges with your creativity.</p>
-                        <a href="mailto:ravindraprasadrai1212@gmail.com?subject=Hackathon Registration" class="btn-register">Register Now</a>
-                    </div>
-                    <div class="event" id="webinars">
-                        <img src="webnier.jpg" alt="Webinar Event">
-                        <h3>Webinars</h3>
-                        <p>Engage with industry leaders and learn about the latest trends in technology and innovation.</p>
-                        <a href="mailto:ravindraprasadrai1212@gmail.com?subject=Webinar Registration" class="btn-register">Register Now</a>
-                    </div>
-                    <div class="event" id="innovations">
-                        <img src="innovations image.jpg" alt="Innovations Event">
-                        <h3>Innovations</h3>
-                        <p>Showcase your innovative projects and collaborate with peers to develop impactful solutions for real-world problems.</p>
-                        <a href="mailto:ravindraprasadrai1212@gmail.com?subject=Innovation Event Registration" class="btn-register">Register Now</a>
-                    </div>
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" rows="5"></textarea>
                 </div>
-            </div>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
-        <section id="why-join">
-            <div class="content">
-                <h2>Why Join the Innovation Cell?</h2>
-                <p>Becoming a part of the Innovation Cell is a journey to unlock your potential. Here’s why you should join us:</p>
-                <ul>
-                    <li>Work on real-world problems and contribute to cutting-edge research projects.</li>
-                    <li>Collaborate with a diverse team of like-minded individuals who share your passion for innovation.</li>
-                    <li>Get mentorship from experts in technology, entrepreneurship, and design thinking.</li>
-                    <li>Enhance your skills in areas such as robotics, AI, IoT, and quantum computing.</li>
-                    <li>Showcase your ideas at national and international platforms.</li>
-                </ul>
-                <a href="#contacts" class="btn-primary">Join Now</a>
-            </div>
-        </section>
-        <section id="team">
-            <div class="content">
-                <h2>Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="Sarfaraj Alam.jpg" alt="Sarfaraj Alam">
-                        <h3>Sarfaraj Alam</h3>
-                        <p class="role">President (3rd year)</p>
-                        <p class="description">Responsible for leading, managing, and representing the club, ensuring its smooth functioning, and fostering a positive and productive environment for all members.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="IMM.png" alt="Md Rafe Akhtar">
-                        <h3>Md Rafe Akhtar</h3>
-                        <p class="role">Vice President (3rd year)</p>
-                        <p class="description">Assists the President in managing the club, representing the club at events, organizing activities, and providing support to ensure the club's success.</p>
-                    </div>
-                    <div class="team-member">
-                         <img src="Kundan.jpg" alt="Kundan">
-                        <h3>Kundan kumar</h3>
-                        <p class="role">Secretary (1st year)</p>
-                        <p class="description">Responsible for recording and maintaining the club's official records, taking minutes during meetings, and ensuring effective communication within the club.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Nandini</h3>
-                        <p class="role">Secretary (1st year)</p>
-                        <p class="description">Shares the responsibilities of the Secretary role, contributing to record-keeping, communication, and administrative tasks to support the club's operations.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="Md Rafe Akhrar.jpg" alt="Md Rafe Akhtar">
-                        <h3>Musharaff</h3>
-                        <p class="role">Treasurer (3rd year)</p>
-                        <p class="description">Manages the club's finances, including collecting dues, tracking expenses, preparing financial reports, and ensuring responsible financial management.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Tushar Pandey</h3>
-                        <p class="role">Treasurer (2nd year)</p>
-                        <p class="description">Collaborates with the Treasurer in managing the club's finances, assisting with budgeting, expense tracking, and financial reporting.</p>
-                    </div>
-                     <div class="team-member">
-                        <h3>Aditya yadav</h3>
-                        <img src="Ad.jpg" alt="Aditya yadav">
-                        <p class="role">Public Relations (1st year)</p>
-                        <p class="description">Handles public relations for the club, including publicity, marketing, social media management, and approaching potential sponsors.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Anubhav Kumar Thakur</h3>
-                        <img src="anu.jpg" alt="Anubhav kumar thakur">
-                        <p class="role">Public Relations (1st year)</p>
-                        <p class="description">Handles public relations for the club, including publicity, marketing, social media management, and approaching potential sponsors.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Pritam Dutta</h3>
-                         <img src="BPD.jpg" alt="Pritam">
-                        <p class="role">Event Coordinator (1st year)</p>
-                        <p class="description">Coordinates with students and faculty during event organization, ensuring smooth logistics, effective communication, and successful event execution.</p>
-                    </div>
-                    <div class="team-member">
-                        <h3>Uday Pratap Singh</h3>
-                        <p class="role">Event Coordinator (1st year)</p>
-                        <p class="description">Collaborates with the Event Coordinator to manage event logistics, communication, and student engagement, contributing to the success of club events.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contacts">
-            <div class="content">
-                <h2>Contact Us</h2>
-                <p>Phone: +918899492175</p>
-                <p>Phone: +919622785809</p>
-                <p>Email: <a href="mailto:ravindraprasadrai1212@gmail.com">ravindraprasadrai1212@gmail.com</a></p>
-                <p>Instagram: <a href="https://www.instagram.com/innovationclub_cuj/" target="_blank">@innovationclub_cuj</a></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Made with ❤️ by Aditya yadav</p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></script>
 </body>
 </html>
